@@ -1,8 +1,0 @@
-print("Hello world!!!")
-print("Hello korea!!!")
-print("Hello china!!!")
-print("Hello japan!!!")
-print("Hello usa!!!")
-print("Hello russia!!!")
-print("Hello demark!!!")
-print("Hello brazil!!!")
