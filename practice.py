@@ -38,3 +38,13 @@ print("나는 {age}살이고 {fruit}를 좋아합니다.".format(age=20, fruit="
 age = 20
 fruit = "사과"
 print(f"나는 {age}살이고 {fruit}를 좋아해요.")
+
+# etc + 탈출문자
+print("""i 
+do
+soccer""") #여러 줄 출력
+print("i do \tsoccer") #tab
+print("i do \nsoccer") #enter
+print("\\") #\\ 역슬래쉬 출력
+print("red apple\rpine") #\r 커서 이동
+print("apple") #\b 백스페이스 한글자 삭제
