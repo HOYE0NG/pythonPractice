@@ -310,3 +310,28 @@ print(f"전체 총 : {gun}")
 
 #일반적으로 전역 변수를 많이 사용하면 함수 관리가 어려워진다.
 #따라서 파라미터로 넘겨주고 값을 받아서 사용하는 편이 더 권장됨.
+
+#퀴즈
+# 표준 체중을 구하는 프로그램
+# 남자 : 키 * 키 * 22
+# 여자 : 키 * 키 * 22
+
+# 조건 1 : 표준 체중은 별도의 함수 내에서 계산
+# 조건 2 : 전달값 : 키, 성별
+# 조건 3 : 표준 체중은 소수점 둘째자리까지 표시
+
+# (출력 예제)
+# 키 175cm 남자의 표준 체중은 67.38kg 입니다.
+
+def std_weight(height, gender):
+    if(gender=="여자"):
+        height /= 100
+        weight = round(height*height*21,2)
+        print(f"키 {int(height*100)}cm 여자의 표준 체중은 {weight}kg 입니다.")
+    else:
+        height /= 100
+        weight = round(height*height*22,2)
+        print(f"키 {int(height*100)}cm 남자의 표준 체중은 {weight}kg 입니다.")
+
+std_weight(175,"남자")
+std_weight(160,"여자")
