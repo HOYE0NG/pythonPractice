@@ -106,4 +106,36 @@ print(dic.items())
 dic.clear()
 print(dic)
 
- 
+ #튜플
+ #변경 불가하지만 속도가 빠름
+tpl = ("돈까스", "치즈까스")
+print(tpl)
+name = "김종국"
+age = 20
+hobby = "코딩"
+print(name,age,hobby)
+name,age,hobby = "김종국",20,"코딩"
+print(name,age,hobby)
+name = "유재석"
+print(name,age,hobby)
+
+#집합
+mySet = {1,2,3,3,3}
+print(mySet)
+java = {"카이", "백현", "세훈"}
+python =set(["카이", "시우민"])
+#교집합
+print(java&python)
+print(java.intersection(python))
+#합집합
+print(java|python)
+print(java.union(python))
+#차집합
+print(java - python)
+print(java.difference(python))
+#추가
+python.add("백현")
+print(python)
+#삭제
+java.remove("카이")
+print(java) 
