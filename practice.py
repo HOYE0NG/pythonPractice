@@ -270,3 +270,43 @@ def profile2(name, age, main_lang):
 profile(name="유재석", age=20,main_lang="파이썬")
 profile(age=20, name="유재석", main_lang="파이썬")
 
+#가변 인자 "*"
+def profile3(name, age, l1, l2, l3, l4, l5):
+    print(f"이름 : {name}\t나이 : {age}\t", end=" ")
+    print(l1, l2, l3, l4, l5)
+
+profile3("유재석",20,"파이썬","자바","C","C++","C#")
+profile3("김태호",24,"파이썬","자바","","","")
+
+def profile4(name, age, *language):
+    print(f"이름 : {name}\t나이 : {age}\t", end=" ")
+    for lang in language:
+        print(lang, end=" ")
+    print()
+    
+profile4("유재석",20,"파이썬","자바","C","C++","C#")
+profile4("김태호",24,"파이썬","자바")
+
+#지역변수와 전역변수
+
+gun = 10
+
+# def checkpoint(soldiers):
+#     gun = gun - soldiers <-- 전역 변수를 안에서 사용
+#     print(f"[함수 내] 남은 총 : {gun}")
+    
+# print(f"전체 총 : {gun}")
+# checkpoint(2)
+# print(f"전체 총 : {gun}")
+
+def checkpoint(soldiers):
+    global gun
+    gun = gun - soldiers
+    print(f"[함수 내] 남은 총 : {gun}")
+
+print(f"전체 총 : {gun}")
+checkpoint(2)
+print(f"전체 총 : {gun}")
+
+#일반적으로 전역 변수를 많이 사용하면 함수 관리가 어려워진다.
+#따라서 파라미터로 넘겨주고 값을 받아서 사용하는 편이 더 권장됨.
