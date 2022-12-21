@@ -76,3 +76,34 @@ print(numLst)
 #리스트 확장
 numLst.extend(lst)
 print(numLst)
+
+#사전
+dic = {"C-1":"유재석", "C-2":"하하"}
+print(dic)
+#가져오기
+print(dic["C-1"])
+print(dic.get("C-1"))
+# print(dic["C-3"]) <-- 오류
+print(dic.get("C-3")) #오류 아님
+print(dic.get("C-3","사용 가능")) #디폴트값 설정
+print("C-3" in dic) #값 있는지 확인
+#추가
+dic["C-3"] = "박명수"
+dic["C-4"] = "길"
+print(dic)
+#삭제
+del dic["C-3"]
+print(dic)
+del dic["C-4"]
+print(dic)
+#key 값 출력
+print(dic.keys())
+#values 값 출력
+print(dic.values())
+#key-values 출력
+print(dic.items())
+#전부 삭제
+dic.clear()
+print(dic)
+
+ 
