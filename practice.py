@@ -48,3 +48,31 @@ print("i do \nsoccer") #enter
 print("\\") #\\ 역슬래쉬 출력
 print("red apple\rpine") #\r 커서 이동
 print("apple") #\b 백스페이스 한글자 삭제
+
+#리스트
+lst = ["유재석", "강호동", "박명수"]
+print(lst)
+#리스트 인덱스
+print(lst.index("박명수"))
+#리스트 추가
+lst.append("하하")
+print(lst)
+#리스트 삽입
+lst.insert(1,"조세호")
+print(lst)
+#리스트 제거
+print(lst.pop())
+print(lst)
+#몇개 원소 있는지 확인
+print(lst.count("유재석"))
+print(lst.count("길"))
+#정렬
+numLst = [4,2,5,1,3]
+numLst.sort()
+print(numLst)
+#순서뒤집기
+numLst.reverse()
+print(numLst)
+#리스트 확장
+numLst.extend(lst)
+print(numLst)
