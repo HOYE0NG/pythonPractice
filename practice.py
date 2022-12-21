@@ -139,3 +139,17 @@ print(python)
 #삭제
 java.remove("카이")
 print(java) 
+
+#자료구조 변경
+lst = [1,2,3,3]
+print(lst)
+print(type(lst))
+tpl = tuple(lst)
+print(tpl)
+print(type(tpl))
+st = set(tpl)
+print(st)
+print(type(st))
+lst = list(st)
+print(lst)
+print(type(lst))
