@@ -255,3 +255,11 @@ def withdraw_night(balance, money):
 
 commission, balance = withdraw_night(balance, 500)
 print("수수료는 {0}원이며, 잔액은 {1}원입니다.".format(commission, balance))
+
+#함수 기본값
+def profile(name, age=17, main_lang="파이썬"):
+    print(f"이름 : {name}\t나이 : {age}\t주 사용 언어 : {main_lang}")
+
+profile("유재석")
+profile("김태호")
+
