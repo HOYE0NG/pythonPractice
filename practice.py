@@ -153,3 +153,41 @@ print(type(st))
 lst = list(st)
 print(lst)
 print(type(lst))
+
+#if문
+# temp = int(input("오늘 기온은? "))
+temp = 30
+if temp >=30 :
+    print("덥습니다.")
+elif temp>=10 and temp<30:
+    print("딱 좋습니다.")
+else :
+    print("춥습니다.")
+    
+#for문
+for i in range(5):
+    print(i)
+for i in range(1,6):
+    print(i)
+lst = [1,2,3,4,5]
+for i in lst :
+    print(i)
+lst.clear()
+lst = ["유리", "수영", "태연"]
+for cus in lst:
+    print("{0}님, 커피가 준비되었습니다.".format(cus))
+    print(f"{cus}님, 토스트가 준비되었습니다.")
+    
+#while문
+index = 10
+while(index>0):
+    print(index)
+    if(index==8):
+        print("continue")
+        index -= 1
+        continue
+    elif(index==5):
+        print("break")
+        break
+    print("출력")
+    index -= 1
