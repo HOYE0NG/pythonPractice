@@ -191,3 +191,37 @@ while(index>0):
         break
     print("출력")
     index -= 1
+
+#한줄 for문
+std = [1,2,3,4,5]
+print(std)
+std = [i+100 for i in std]
+print(std)
+std = ["nhy", "jssss", "jackson", "danaka"]
+print(std)
+std = [i.upper() for i in std]
+print(std)
+std = [len(i) for i in std]
+print(std)
+
+# 당신은 코코아 서비스를 이용하는 택시 기사입니다.
+# 50명의 승객과 매칭 기회가 있을 때, 총 탑승 승객 수를 구하는 프로그램을 작성하시오.
+
+# 조건1 : 승객별 운행 소요 시간은 5~50분 사이의 난수로 정해집니다.
+# 조건2 : 당신은 소요 시간 5~15분 사이의 승객만 매칭해야 합니다.
+
+from random import *
+
+cuss = [randint(5,51) for i in range(50)]
+i = 0
+cnt = 0
+for cus in cuss:
+    i += 1
+    if(cus<15):
+        print(f"[O] {i}번째 손님 (소요시간 : {cus}분)")
+        cnt += 1
+    else:
+        print(f"[ ] {i}번째 손님 (소요시간 : {cus}분)")
+print("총 탑승 승객 : {0} 분".format(cnt))
+
+ 
