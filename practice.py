@@ -390,7 +390,7 @@ print("{0:.3f}".format(5/3))
 
 #읽기
 # score_file = open("score.txt", "r", encoding="utf8")
-# print(score_file.read())
+# print(score_file.r ead())
 # score_file.close()
 
 #한줄씩 읽기
@@ -422,15 +422,46 @@ score_file.close()
 #프로그램 상에서 데이터를 파일 상으로 저장시키고 읽어들임
 #binary type
 #no need set encoding
-import pickle
+
 # profile_file = open("profile.pickle","wb")
 # profile = {"이름":"박명수", "나이":30,"취미":["축구","골프","코딩"]}
 # print(profile)
 # pickle.dump(profile, profile_file)
 # #프로필에 있는 정보를 file에 저장함
 # profile_file.close()
-
+import pickle
 profile_file = open("profile.pickle","rb")
 profile = pickle.load(profile_file) #불러와서 읽음
 print(profile)
 profile_file.close()
+
+#with
+#import pickle
+
+with open("profile.pickle", "rb") as profile_file:
+    print(pickle.load(profile_file))
+    #close를 해줄 필요가 없음
+
+#파일 쓰기
+with open("study.txt","w",encoding="utf8") as study_file:
+    study_file.write("파이썬을 공부했습니다.")
+
+#파일 읽기
+with open("study.txt", "r", encoding="utf8") as read_study_file:
+    print(read_study_file.read())
+
+
+#퀴즈
+#주차별 보고서 템플릿 만들기
+
+for i in range(1,51):
+    report_file = open(f"{i} 주차.txt","w",encoding="utf8")
+    print(f"- {i}주차 주간보고 -",file=report_file)
+    print("부서 :",file=report_file)
+    print("이름 :",file=report_file)
+    print("업무 요약 :",file=report_file)
+    report_file.close() 
+
+    
+
+    
