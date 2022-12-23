@@ -1,27 +1,27 @@
 # -*- coding: utf-8 -*-
 
-str = "Python is amazing"
+string = "Python is amazing"
 
 #change lower
-print(str.lower())
+print(string.lower())
 #change upper
-print(str.upper())
+print(string.upper())
 #check up
-print(str.isupper())
+print(string.isupper())
 #check low
-print(str.islower())
+print(string.islower())
 #check length
-print(len(str))
+print(len(string))
 #replace
-print(str.replace("Python","파이썬"))
+print(string.replace("Python","파이썬"))
 #첫번 째로 나오는 해당 문자 인덱스 찾기
-print(str.index("a"))
-print(str.index("a",str.index("a")+1))
-print(str.find("a"))
-print(str.find("a",str.find("a")+1))
-print(str.find("파"))
+print(string.index("a"))
+print(string.index("a",string.index("a")+1))
+print(string.find("a"))
+print(string.find("a",string.find("a")+1))
+print(string.find("파"))
 #해당 문자의 개수
-print(str.count("is"))
+print(string.count("is"))
 
 #문자열 포맷팅
 print("a"+"b") #붙여쓰기
@@ -335,3 +335,44 @@ def std_weight(height, gender):
 
 std_weight(175,"남자")
 std_weight(160,"여자")
+
+#표준 입출력
+print("Python", "Java", "JavaScript", sep=",", end="?")
+print("무엇이 더 재밌을까요?")
+import sys
+print("Python", "Java", file=sys.stdout) #표준 출력
+print("Python", "Java", file=sys.stderr) #표준 에러
+
+#시험 성적
+scores = {"수학" : 0, "영어" : 50, "코딩" : 50}
+for subject, score in scores.items(): #keys = subject, values = score 튜플로 보내준다
+    # print(subject, score)
+    print(subject.ljust(8), str(score).rjust(4),sep=":")
+    #just(n) n칸의 공백을 확보하고 정렬
+    
+#은행 대기 순번표
+#001, 002, 003, ...
+for num in range(1,21):
+    print("대기번호 : " + str(num).zfill(3))
+    #zfill(n) n칸의 공백을 확보하고 나머지 왼 쪽은 0을 채움
+
+#표준 입력
+# answer = input("아무 값이나 입력하세요 : ") #항상 str로 나옴
+# print(f"입력하신 값은 {answer}입니다.")
+
+# 빈 자리는 빈공간으로 두고, 오른쪽 정렬을 하되, 총 10자리 공간을 확보
+print("{0:>10}".format(500))
+# 양수일 땐 +로 표시, 음수일 땐 -로 표시(부호를 표시함)
+print("{0:>+10}".format(500))
+print("{0:>+10}".format(-500))
+#왼쪽 정렬하고, 빈칸으로 _로 채움
+print("{0:_<+10}".format(500))
+print("{0:_<10}".format(500))
+print("{0:<10}".format(500))
+#3자리 마다 콤마를 찍어주기
+print("{0:+,}".format(1000000000))
+#3자리 마다 콤마를 찍어주고 부호도 붙이고 자릿수 확보하기
+#빈자리는 ^ 로 채우기
+print("{0:^<+30,}".format(1000000000)) 
+#소수점 출력 + 특정 자리수
+print("{0:.3f}".format(5/3))
