@@ -37,3 +37,11 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         
 valkyrie = FlyableAttackUnit("발키리",200,6,5)
 valkyrie.fly(valkyrie.name, "3시")
+
+#pass : 아무것도 안하고 그냥 넘어감
+class BuildingUnit(Unit, Flyable):
+    def __init__(self, name, hp, location):
+        # Unit.__init__(self, name, hp, 0)
+        super().__init__(name, hp, 0)
+        #super()은 부모를 뜻하지만 다중 상속일 때는 못쓴다.
+    
