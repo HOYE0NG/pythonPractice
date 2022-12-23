@@ -417,3 +417,20 @@ print
 for line in lines:
     print(line, end="")
 score_file.close()
+
+#pickle
+#프로그램 상에서 데이터를 파일 상으로 저장시키고 읽어들임
+#binary type
+#no need set encoding
+import pickle
+# profile_file = open("profile.pickle","wb")
+# profile = {"이름":"박명수", "나이":30,"취미":["축구","골프","코딩"]}
+# print(profile)
+# pickle.dump(profile, profile_file)
+# #프로필에 있는 정보를 file에 저장함
+# profile_file.close()
+
+profile_file = open("profile.pickle","rb")
+profile = pickle.load(profile_file) #불러와서 읽음
+print(profile)
+profile_file.close()
