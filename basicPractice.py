@@ -454,13 +454,17 @@ with open("study.txt", "r", encoding="utf8") as read_study_file:
 #퀴즈
 #주차별 보고서 템플릿 만들기
 
-for i in range(1,51):
-    report_file = open(f"{i} 주차.txt","w",encoding="utf8")
-    print(f"- {i}주차 주간보고 -",file=report_file)
-    print("부서 :",file=report_file)
-    print("이름 :",file=report_file)
-    print("업무 요약 :",file=report_file)
-    report_file.close() 
+# for i in range(1,51):
+#     report_file = open(f"{i} 주차.txt","w",encoding="utf8")
+#     print(f"- {i}주차 주간보고 -",file=report_file)
+#     print("부서 :",file=report_file)
+#     print("이름 :",file=report_file)
+#     print("업무 요약 :",file=report_file)
+#     report_file.close() 
+
+
+
+#클래스
 
     
 
